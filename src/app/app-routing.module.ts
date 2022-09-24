@@ -1,10 +1,19 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import {RouterModule, Routes} from "@angular/router";
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: "",
+    loadChildren: () => import('./modules/weather-app/weather-app.module').then(m => m.WeatherAppModule)
+  },
+]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  declarations: [],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes)
+  ]
 })
 export class AppRoutingModule { }
