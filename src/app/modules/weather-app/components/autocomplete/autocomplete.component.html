@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <h3>Location</h3>
+  <div class="ng-autocomplete">
+    <ng-autocomplete
+      [data]="data"
+      [searchKeyword]="keyword"
+      placeholder="Search city..."
+      [itemTemplate]="itemTemplate"
+      (selected)='selectEvent($event)'
+      [notFoundTemplate]="notFoundTemplate">
+    </ng-autocomplete>
+
+    <ng-template #itemTemplate let-item>
+      <a [innerHTML]="item.name"></a>
+    </ng-template>
+
+    <ng-template #notFoundTemplate let-notFound>
+      <div [innerHTML]="notFound"></div>
+    </ng-template>
+  </div>
+</div>
+

@@ -1,0 +1,108 @@
+<div class="weather-items">
+
+  <div class="weather-item" *ngFor="let weather of weatherDataNow?.weather">
+    <div *ngIf="weather?.main === 'Rain'"class="icon">
+      <i class="bi bi-cloud-drizzle"></i>
+    </div>
+    <div *ngIf="weather?.main === 'Clouds'" class="icon">
+      <i class="bi bi-cloud"></i>
+    </div>
+    <div *ngIf="weather?.main === 'Clear'" class="icon">
+      <i class="bi bi-sun"></i>
+    </div>
+    <div class="text-value" *ngFor="let weather of weatherDataNow?.weather">
+      <span>{{weather?.main}}</span>
+    </div>
+  </div>
+
+  <div class="weather-item">
+    <div class="text-values temperature">
+      <span class="number">{{weatherDataNow?.main?.temp | number: "1.0-0"}}</span>
+      <span class="degree">°C</span>
+    </div>
+  </div>
+
+  <div class="weather-item max-min">
+    <div class="max">
+      <span>{{weatherDataNow?.main?.temp_max | number: "1.0-0"}}°C</span>
+      <i class="bi bi-arrow-up"></i>
+    </div>
+    <div class="min">
+      <span>{{weatherDataNow?.main?.temp_min | number: "1.0-0"}}°C</span>
+      <i class="bi bi-arrow-down"></i>
+    </div>
+  </div>
+
+  <div class="weather-item">
+    <div class="icon">
+      <i class="bi bi-droplet"></i>
+    </div>
+    <div class="text-values" *ngFor="let weather of weatherDataToday?.list">
+      <span>{{weather?.humidity}}%</span>
+    </div>
+    <div class="text">
+      Humidity
+    </div>
+  </div>
+
+  <div class="weather-item">
+    <div class="icon">
+      <i class="bi bi-speedometer"></i>
+    </div>
+    <div class="text-values" *ngFor="let weather of weatherDataToday?.list">
+      <span>{{weather?.pressure}} mBar</span>
+    </div>
+    <div class="text">
+      Pressure
+    </div>
+  </div>
+
+  <div class="weather-item">
+    <div class="icon">
+      <i class="bi bi-wind"></i>
+    </div>
+    <div class="text-values" *ngFor="let weather of weatherDataToday?.list">
+      <span>{{weather?.speed | number: "1.0-0"}} km/h</span>
+    </div>
+    <div class="text">
+      Wind
+    </div>
+  </div>
+
+  <div class="weather-item">
+    <div class="icon">
+      <i class="bi bi-sunrise"></i>
+    </div>
+    <div class="text-values"  *ngFor="let weather of weatherDataToday?.list">
+      <span>{{weather!.sunrise * 1000 | date:"HH:mm"}}</span>
+    </div>
+    <div class="text">
+      Sunrise
+    </div>
+  </div>
+
+  <div class="weather-item">
+    <div class="icon">
+      <i class="bi bi-sunset"></i>
+    </div>
+    <div class="text-values" *ngFor="let weather of weatherDataToday?.list">
+      <span>{{weather!.sunset * 1000 | date:"HH:mm"}}</span>
+    </div>
+    <div class="text">
+      Sunset
+    </div>
+  </div>
+
+  <div class="weather-item">
+    <div class="icon">
+      <i class="bi bi-hourglass"></i>
+    </div>
+    <div class="text-values" *ngFor="let weather of weatherDataToday?.list">
+      <span>{{(weather!.sunrise - weather!.sunset) * 1000 | date: "HH:mm"}}</span>
+    </div>
+    <div class="text">
+      Daytime
+    </div>
+  </div>
+
+</div>

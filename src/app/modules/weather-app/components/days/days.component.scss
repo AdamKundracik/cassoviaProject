@@ -1,0 +1,50 @@
+.days {
+  padding: 20px 20px 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 101px;
+  column-gap: 15px;
+  .day {
+    //height: 100%;
+    width: 100%;
+    display: flex;
+    .day-box {
+      height: 100%;
+      width: 100%;
+      box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      margin: auto;
+      vertical-align: center;
+      .icon {
+        text-align: center;
+        font-size: 35px;
+        color: #666666;
+      }
+      .text {
+        text-align: center;
+        font-size: 12px;
+        font-weight: bolder;
+        color: #666666;
+      }
+      .temperature {
+        display: flex;
+        .number {
+          font-size: 64px;
+        }
+        .degree {
+          position: relative;
+          font-size: 24px;
+          vertical-align: top;
+          margin-top: 10px;
+        }
+      }
+      .text-values {
+        text-align: center;
+        font-weight: bolder;
+        margin-bottom: 2px;
+
+      }
+    }
+
+  }
+}

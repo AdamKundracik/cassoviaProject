@@ -1,0 +1,28 @@
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+  .nav-item {
+    height: 100%;
+    margin: auto 0;
+    display: flex;
+    span {
+      margin: auto;
+    }
+    i {
+      margin: auto auto auto 0;
+    }
+  }
+  .datetime {
+    width: 60%;
+    color: #999999
+  }
+  .locality {
+    cursor: pointer;
+    width: 40%;
+    background-color: rgba(13, 159, 234, 0.08);
+    border-radius: 0 0 0 25px;
+    color: rgba(13, 160, 234, 1);
+  }
+}

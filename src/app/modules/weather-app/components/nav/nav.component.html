@@ -1,0 +1,11 @@
+<div class="nav">
+  <div class="datetime nav-item">
+    <span>{{today | date:"EEEE, d MMM y | HH:mm"}}</span>
+  </div>
+  <div class="locality nav-item" (click)="redirectToAutocomplete()">
+    <span>{{weatherDataToday?.city?.name}}, Slovakia</span>
+    <i class="bi bi-geo-alt-fill"></i>
+  </div>
+</div>
+
+
