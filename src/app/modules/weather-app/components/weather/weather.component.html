@@ -1,17 +1,19 @@
 <div class="weather-items">
 
-  <div class="weather-item" *ngFor="let weather of weatherDataNow?.weather">
-    <div *ngIf="weather?.main === 'Rain'"class="icon">
+  <div class="weather-item">
+    <ng-container *ngIf="weatherDataNow">
+    <div *ngIf="weatherDataNow!.weather[0]!.main === 'Rain' " class="icon">
       <i class="bi bi-cloud-drizzle"></i>
     </div>
-    <div *ngIf="weather?.main === 'Clouds'" class="icon">
+    <div *ngIf="weatherDataNow!.weather[0]!.main === 'Clouds'" class="icon">
       <i class="bi bi-cloud"></i>
     </div>
-    <div *ngIf="weather?.main === 'Clear'" class="icon">
+    <div *ngIf="weatherDataNow!.weather[0]!.main === 'Clear'" class="icon">
       <i class="bi bi-sun"></i>
     </div>
-    <div class="text-value" *ngFor="let weather of weatherDataNow?.weather">
-      <span>{{weather?.main}}</span>
+    </ng-container>
+    <div class="text-value" >
+      <span>{{weatherDataNow!.weather[0].main}}</span>
     </div>
   </div>
 

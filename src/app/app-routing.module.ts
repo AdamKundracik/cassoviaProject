@@ -5,7 +5,7 @@ import {RouterModule, Routes} from "@angular/router";
 const routes: Routes = [
   {
     path: "",
-    loadChildren: () => import('./modules/weather-app/weather-app.module').then(m => m.WeatherAppModule)
+    loadChildren: () => import('./modules/weather-app/weather.module').then(m => m.WeatherModule)
   },
 ]
 

@@ -1,6 +1,9 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
 import {LocationStrategy} from "@angular/common";
+import {slideInAnimation} from "../../../../animations";
+import {WeatherService} from "../../../../shared/services/weather.service";
+import {CityService} from "../../../../shared/services/city.service";
 
 @Component({
   selector: 'app-main',
@@ -11,16 +14,23 @@ import {LocationStrategy} from "@angular/common";
 export class MainComponent implements OnInit {
   height: string = "0%";
 
-  constructor( private url:LocationStrategy) { }
+
+  constructor(private url: LocationStrategy, private cd: ChangeDetectorRef, private router: Router) {
+    this.router.events.subscribe({
+      next: (event: any) => {
+        if(event.url === "/today/weather") {
+          this.height = "60%"
+        } else {
+          this.height = "90%"
+        }
+      }
+
+    })
+  }
 
   ngOnInit(): void {
-    // console.log(this.url.path())
-    // if (this.url.path() == "/today/search") {
-    //   this.height = "90%"
-    // } else {
-    //   this.height = "60%"
-    // }
 
   }
+
 
 }

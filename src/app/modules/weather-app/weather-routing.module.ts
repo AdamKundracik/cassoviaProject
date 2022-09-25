@@ -12,7 +12,7 @@ const routes: Routes = [
     children: [
       {
         path: "weather",
-        component: ContentPage
+        component: ContentPage,
       },
       {
         path: "search",
@@ -21,15 +21,15 @@ const routes: Routes = [
     ]
   },
   {
-    path: "",
+    path: "today",
     pathMatch: "full",
-    redirectTo: "/today/weather"
+    redirectTo: "/weather"
   },
   {
     path: '**',
     pathMatch: 'full',
     redirectTo: '/today/weather'
-  }
+  },
 ]
 
 @NgModule({
@@ -39,4 +39,4 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ]
 })
-export class WeatherAppRoutingModule { }
+export class WeatherRoutingModule { }

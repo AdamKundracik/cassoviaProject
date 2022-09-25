@@ -1,7 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {WeatherDataToday} from "../../../../shared/models/weatherDataToday.model";
-import {WeatherDataNow} from "../../../../shared/models/weatherDataNow.model";
+import {WeatherDataToday} from "../../../../shared/models/weather-data-today.model";
+import {WeatherDataNow} from "../../../../shared/models/weather-data-now.model";
+import {CityService} from "../../../../shared/services/city.service";
 
 @Component({
   selector: 'app-nav',
@@ -10,6 +11,7 @@ import {WeatherDataNow} from "../../../../shared/models/weatherDataNow.model";
 })
 export class NavComponent implements OnInit {
   today = new Date();
+  city = "";
 
   @Input()
   public weatherDataToday?: WeatherDataToday;
@@ -17,9 +19,10 @@ export class NavComponent implements OnInit {
   @Input()
   public weatherDataNow?: WeatherDataNow;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private cityService: CityService) { }
 
   ngOnInit(): void {
+    this.city = this.cityService.city;
   }
 
   public redirectToAutocomplete() {

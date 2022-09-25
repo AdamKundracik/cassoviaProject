@@ -1,22 +1,15 @@
 import { Injectable } from '@angular/core';
-import { API_URL } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class CityService {
 
-  private readonly API_URL = API_URL
-
-  public city: string = "Kosice"
+  city = "Košice"
 
   constructor() {
   }
 
-  public getCity() {
-    return this.city;
-  }
-
-  public setCity(city: string) {
+  public setCity(city: string): void {
     this.city = city;
   }
 }

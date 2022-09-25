@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MainComponent} from "./components/main/main.component";
-import {WeatherAppRoutingModule} from "./weather-app-routing.module";
+import {WeatherRoutingModule} from "./weather-routing.module";
 import {MainPage} from "./pages/main/main.page";
 import { ContentPage } from './pages/content/content.page';
 import { ContentComponent } from './components/content/content.component';
@@ -32,11 +32,11 @@ import {AutocompleteLibModule} from "angular-ng-autocomplete";
   ],
   imports: [
     CommonModule,
-    WeatherAppRoutingModule,
+    WeatherRoutingModule,
     RouterModule,
     ReactiveFormsModule,
     AutocompleteLibModule
 
   ]
 })
-export class WeatherAppModule { }
+export class WeatherModule { }

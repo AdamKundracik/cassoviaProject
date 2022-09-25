@@ -1,13 +1,13 @@
 .days {
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 20px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 101px;
   column-gap: 15px;
   .day {
-    //height: 100%;
-    width: 100%;
+    height: 100%;
     display: flex;
+
     .day-box {
       height: 100%;
       width: 100%;
@@ -47,4 +47,18 @@
     }
 
   }
+}
+
+@media only screen and (min-width: 1200px) {
+  .days {
+    padding: 10px 20px 20px 20px ;
+    display: flex;
+    height: 90%;
+    .day {
+      margin: auto;
+      height: 90%;
+      width: 150px;
+    }
+  }
+
 }

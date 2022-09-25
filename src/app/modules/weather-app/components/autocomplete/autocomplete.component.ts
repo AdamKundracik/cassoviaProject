@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {CityService} from "../../../../shared/services/city.service";
 import {City} from "../../../../shared/models/city.model";
+import {cities} from "../../constants/cities.constants";
 
 
 @Component({
@@ -16,37 +17,11 @@ export class AutocompleteComponent implements OnInit {
   }
 
   keyword = 'name';
-  data = [
-    {
-      id: 1,
-      name: 'Bratislava'
-    },
-    {
-      id: 2,
-      name: 'Humenné'
-    },
-    {
-      id: 3,
-      name: 'Koromľa'
-    },
-    {
-      id: 4,
-      name: 'Košice'
-    },
-    {
-      id: 5,
-      name: 'Michalovce'
-    },
-    {
-      id: 6,
-      name: 'Sobrance'
-    }
-  ];
-
+  cities = cities;
   ngOnInit(): void {
   }
 
-  public selectEvent(item: City) {
+  selectEvent(item: City): void {
     console.log(item.name)
     this.cityService.setCity(item.name)
     this.router.navigate(['/','today','weather'])

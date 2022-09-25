@@ -1,13 +1,14 @@
 <div class="wrapper">
   <h3>Location</h3>
   <div class="ng-autocomplete">
+
     <ng-autocomplete
-      [data]="data"
+      [data]="cities"
       [searchKeyword]="keyword"
       placeholder="Search city..."
       [itemTemplate]="itemTemplate"
-      (selected)='selectEvent($event)'
-      [notFoundTemplate]="notFoundTemplate">
+      [notFoundTemplate]="notFoundTemplate"
+      (selected)='selectEvent($event)'>
     </ng-autocomplete>
 
     <ng-template #itemTemplate let-item>
@@ -17,6 +18,7 @@
     <ng-template #notFoundTemplate let-notFound>
       <div [innerHTML]="notFound"></div>
     </ng-template>
+
   </div>
 </div>
 
