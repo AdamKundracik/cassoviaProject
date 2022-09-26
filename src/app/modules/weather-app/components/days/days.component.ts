@@ -10,7 +10,7 @@ import {WeatherService} from "../../../../shared/services/weather.service";
 export class DaysComponent implements OnInit {
 
   @Input()
-  public weatherData3Days?: DailyWeather
+  weatherData3Days?: DailyWeather
 
   constructor() { }
 

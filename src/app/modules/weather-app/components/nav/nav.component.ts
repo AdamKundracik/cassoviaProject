@@ -14,10 +14,10 @@ export class NavComponent implements OnInit {
   city = "";
 
   @Input()
-  public weatherDataToday?: WeatherDataToday;
+  weatherDataToday?: WeatherDataToday;
 
   @Input()
-  public weatherDataNow?: WeatherDataNow;
+  weatherDataNow?: WeatherDataNow;
 
   constructor(private router: Router, private cityService: CityService) { }
 

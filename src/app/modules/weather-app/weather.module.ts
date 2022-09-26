@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MainComponent} from "./components/main/main.component";
 import {WeatherRoutingModule} from "./weather-routing.module";
 import {MainPage} from "./pages/main/main.page";
 import { ContentPage } from './pages/content/content.page';
-import { ContentComponent } from './components/content/content.component';
 import { NavComponent } from './components/nav/nav.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { DaysComponent } from './components/days/days.component';
@@ -20,9 +18,7 @@ import {AutocompleteLibModule} from "angular-ng-autocomplete";
 @NgModule({
   declarations: [
     MainPage,
-    MainComponent,
     ContentPage,
-    ContentComponent,
     NavComponent,
     WeatherComponent,
     DaysComponent,
