@@ -1,5 +1,5 @@
 .days {
-  padding: 20px 20px 20px 20px;
+  padding: 10px 20px 20px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 101px;
@@ -48,9 +48,9 @@
 
 @media only screen and (min-width: 1200px) {
   .days {
-    padding: 10px 20px 20px 20px ;
+    padding: 0 20px 20px 20px ;
     display: flex;
-    height: 90%;
+    height: 85%;
     .day {
       margin: auto;
       height: 90%;
