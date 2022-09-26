@@ -1,7 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {WeatherDataToday} from "../../../../shared/models/weather-data-today.model";
+import {List, WeatherDataToday} from "../../../../shared/models/weather-data-today.model";
 import {WeatherDataNow} from "../../../../shared/models/weather-data-now.model";
 import {Weather} from "../../../../shared/models/main-weather.model";
+import {Temp} from "../../../../shared/models/daily.model";
+import {ItemType} from "../weather-item/weather-item.component";
 
 @Component({
   selector: 'app-weather',
@@ -10,14 +12,19 @@ import {Weather} from "../../../../shared/models/main-weather.model";
 })
 export class WeatherComponent implements OnInit {
 
-  @Input()
-  public weatherDataToday?: WeatherDataToday;
+  weatherItemTypes = ItemType
 
   @Input()
-  public weatherDataNow?: WeatherDataNow;
+  weatherDataToday?: List;
 
   @Input()
-  public weather?: Weather;
+  weatherDataNow?: WeatherDataNow;
+
+  @Input()
+  weather?: Weather;
+
+  @Input()
+  temp?: Temp
 
   constructor() { }
 

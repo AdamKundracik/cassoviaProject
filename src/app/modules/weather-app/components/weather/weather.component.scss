@@ -8,13 +8,13 @@
     .icon {
       text-align: center;
       font-size: 35px;
-      color: #666666;
+      color: #AAAAAA;
     }
     .text {
       text-align: center;
       font-size: 12px;
       font-weight: bolder;
-      color: #666666;
+      color: #999999;
     }
     .temperature {
       display: flex;
@@ -29,9 +29,9 @@
       }
     }
     .text-values {
+      font-size: 16px;
       text-align: center;
       font-weight: bolder;
-
     }
   }
   .max-min {
@@ -40,46 +40,38 @@
     color: #666666;
     .max {
       font-size: 16px;
-
+      margin-bottom: 4px;
+      color: #999999;
     }
     .min {
       font-size: 16px;
+      color: #999999;
     }
   }
 }
 
-
-
 @media only screen and (min-width: 1200px) {
   .weather-items {
-
     .weather-item {
       .icon {
         font-size: 25px;
-
       }
-
       .text {
         font-size: 10px;
       }
-
       .temperature {
         .number {
           font-size: 48px;
         }
-
         .degree {
           font-size: 18px;
           vertical-align: top;
           margin-top: 10px;
         }
       }
-
       .max {
         font-size: 12px;
-
       }
-
       .min {
         font-size: 12px;
       }

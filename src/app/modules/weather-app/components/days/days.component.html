@@ -1,32 +1,7 @@
 <div class="days">
 
   <div class="day" *ngFor="let weather of weatherData3Days?.list">
-    <div class="day-box" *ngFor="let weatherMain of weather?.weather">
-
-      <div *ngIf="weatherMain?.main === 'Rain'"class="icon">
-        <i class="bi bi-cloud-drizzle"></i>
-      </div>
-
-      <div *ngIf="weatherMain?.main === 'Clouds'" class="icon">
-        <i class="bi bi-cloud"></i>
-      </div>
-
-      <div *ngIf="weatherMain?.main === 'Clear'" class="icon">
-        <i class="bi bi-sun"></i>
-      </div>
-
-      <div class="text-values">
-        <span>{{weather!.dt * 1000 | date: "EEE, d"}}</span>
-      </div>
-
-      <div class="text">
-        <span>{{weather?.temp?.max | number: "1.0-0"}}°C</span>
-        <i class="bi bi-arrow-up"></i>
-        <span>{{weather?.temp?.min | number: "1.0-0"}}°C</span>
-        <i class="bi bi-arrow-down"></i>
-      </div>
-
-    </div>
+    <app-days-item [data]="weatherMain" [dataWeather]="weather" *ngFor="let weatherMain of weather?.weather"></app-days-item>
   </div>
 
 </div>

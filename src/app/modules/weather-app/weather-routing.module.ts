@@ -11,6 +11,11 @@ const routes: Routes = [
     component: MainPage,
     children: [
       {
+        path: "",
+        pathMatch: "full",
+        redirectTo: "weather"
+      },
+      {
         path: "weather",
         component: ContentPage,
       },
@@ -21,9 +26,9 @@ const routes: Routes = [
     ]
   },
   {
-    path: "today",
+    path: "",
     pathMatch: "full",
-    redirectTo: "/weather"
+    redirectTo: "/today/weather"
   },
   {
     path: '**',

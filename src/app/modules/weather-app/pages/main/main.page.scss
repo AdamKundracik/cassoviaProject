@@ -14,7 +14,6 @@
     left: 0;
     object-fit: cover;
   }
-
   .stacked{
     //margin auto pre PC
     max-width:100%;
@@ -24,16 +23,13 @@
     position: relative;
     overflow: hidden;
   }
-
   .stacked > *{
     grid-column:1/-1;
     grid-row:1/-1
   }
-
   .stacked > .img{
     z-index:-1;
   }
-
   .content-box{
     box-shadow: 0px -16px 40px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -41,11 +37,8 @@
     align-self:end;
     max-height: 90%;
     min-height: 60%;
+    transition: height .3s ease;
   }
-
-
-
-
 }
 
 @media only screen and (min-width: 1200px) {

@@ -12,6 +12,7 @@ export class DaysComponent implements OnInit {
   @Input()
   weatherData3Days?: DailyWeather
 
+
   constructor() { }
 
   ngOnInit(): void {

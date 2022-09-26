@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DailyWeather} from "../../../../shared/models/daily.model";
 import {WeatherDataNow} from "../../../../shared/models/weather-data-now.model";
-import {WeatherDataToday} from "../../../../shared/models/weather-data-today.model";
+import {List, Temp, WeatherDataToday} from "../../../../shared/models/weather-data-today.model";
 import {Weather} from "../../../../shared/models/main-weather.model";
 import {forkJoin, Subscription} from "rxjs";
 import {CityService} from "../../../../shared/services/city.service";
@@ -15,7 +15,8 @@ export class ContentPage implements OnInit, OnDestroy {
 
   weatherData3Days?: DailyWeather
   weatherDataNow?: WeatherDataNow;
-  weatherDataToday?: WeatherDataToday;
+  weatherDataToday?: List;
+  temp?: Temp;
   city = "";
   mainWeather?: Weather;
   private subs = new Subscription();
@@ -39,10 +40,11 @@ export class ContentPage implements OnInit, OnDestroy {
         this.weatherService.getWeather3Days(this.city)]
       ).subscribe({
         next: ([weatherDataToday, weatherDataNow, weatherData3Days]) => {
-          this.weatherDataToday = weatherDataToday;
+          this.weatherDataToday = weatherDataToday.list[0];
           this.weatherDataNow = weatherDataNow;
           this.weatherData3Days = weatherData3Days;
           this.mainWeather = weatherDataNow.weather[0];
+          this.temp = weatherDataToday.list[0].temp;
         },
         error: (error: unknown) => {
           console.log(error as Error)

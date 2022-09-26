@@ -13,12 +13,6 @@ export class NavComponent implements OnInit {
   today = new Date();
   city = "";
 
-  @Input()
-  weatherDataToday?: WeatherDataToday;
-
-  @Input()
-  weatherDataNow?: WeatherDataNow;
-
   constructor(private router: Router, private cityService: CityService) { }
 
   ngOnInit(): void {

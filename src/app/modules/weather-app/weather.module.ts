@@ -8,10 +8,11 @@ import { WeatherComponent } from './components/weather/weather.component';
 import { DaysComponent } from './components/days/days.component';
 import {RouterModule} from "@angular/router";
 import { SearchPage } from './pages/search/search.page';
-import { SearchComponent } from './components/search/search.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {AutocompleteComponent} from "./components/autocomplete/autocomplete.component";
 import {AutocompleteLibModule} from "angular-ng-autocomplete";
+import { WeatherItemComponent } from './components/weather-item/weather-item.component';
+import { DaysItemComponent } from './components/days-item/days-item.component';
 
 
 
@@ -23,8 +24,9 @@ import {AutocompleteLibModule} from "angular-ng-autocomplete";
     WeatherComponent,
     DaysComponent,
     SearchPage,
-    SearchComponent,
-    AutocompleteComponent
+    AutocompleteComponent,
+    WeatherItemComponent,
+    DaysItemComponent
   ],
   imports: [
     CommonModule,

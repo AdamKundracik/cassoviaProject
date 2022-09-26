@@ -7,48 +7,12 @@
   .day {
     height: 100%;
     display: flex;
-    .day-box {
-      width:100%;
-      box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-      border-radius: 16px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      .icon {
-        text-align: center;
-        font-size: 35px;
-        color: #666666;
-      }
-      .text {
-        text-align: center;
-        font-size: 12px;
-        font-weight: bolder;
-        color: #666666;
-      }
-      .temperature {
-        display: flex;
-        .number {
-          font-size: 64px;
-        }
-        .degree {
-          position: relative;
-          font-size: 24px;
-          vertical-align: top;
-          margin-top: 10px;
-        }
-      }
-      .text-values {
-        text-align: center;
-        font-weight: bolder;
-        margin-bottom: 2px;
-      }
-    }
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .days {
-    padding: 0 20px 20px 20px ;
+    padding: 0 20px 20px 20px;
     display: flex;
     height: 85%;
     .day {
@@ -57,5 +21,4 @@
       width: 150px;
     }
   }
-
 }

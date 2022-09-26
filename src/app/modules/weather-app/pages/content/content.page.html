@@ -1,5 +1,5 @@
 <div class="content">
-  <app-nav [weatherDataToday]="weatherDataToday" [weatherDataNow]="weatherDataNow"></app-nav>
-  <app-weather [weatherDataNow]="weatherDataNow" [weatherDataToday]="weatherDataToday" [weather]="mainWeather"></app-weather>
+  <app-nav></app-nav>
+  <app-weather [weatherDataNow]="weatherDataNow" [temp]="temp" [weather]="mainWeather" [weatherDataToday]="weatherDataToday"></app-weather>
   <app-days [weatherData3Days]="weatherData3Days"></app-days>
 </div>

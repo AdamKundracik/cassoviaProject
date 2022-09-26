@@ -3,20 +3,45 @@
   height: 100%;
   flex-direction: column;
   align-items: center;
-  h3 {
+  h4 {
+    padding: 27px 0 27px 0;
     color: #999999;
+    margin: 0;
   }
   .ng-autocomplete {
     margin: 0 auto;
     width: 90%;
+    .autocomplete-container {
+    }
     ::ng-deep {
-      .suggestions-container is-visible {
-        height: 300px;
+      .suggestions-container.is-visible {
+        margin-top: 39px;
+        height: 50vh;
+        box-shadow: none;
       }
       input {
         background-color: #F3F3F3;
-
+        box-shadow: none;
       }
     }
+  }
+}
+
+.city {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  .cityName {
+    font-size: 18px;
+    letter-spacing: -0.05em;
+    color: #444444;
+  }
+  .value {
+    font-weight: 300;
+    color: #666666;
+  }
+  div {
+    font-family: "Barlow";
+    margin-bottom: 7px;
   }
 }

@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <h3>Location</h3>
+  <h4>Location</h4>
   <div class="ng-autocomplete">
 
     <ng-autocomplete
@@ -12,7 +12,14 @@
     </ng-autocomplete>
 
     <ng-template #itemTemplate let-item>
-      <a [innerHTML]="item.name"></a>
+      <div class="city">
+        <div class="cityName">
+          {{item.name}}
+        </div>
+        <div class="value">
+          {{item.value ? (item.value | number: "1.0-0") + "°C" : "..."}}
+        </div>
+      </div>
     </ng-template>
 
     <ng-template #notFoundTemplate let-notFound>
