@@ -13,7 +13,7 @@
 
     <ng-template #itemTemplate let-item>
       <div class="city">
-        <div class="cityName">
+        <div class="cityName" [innerHTML]="item.name">
           {{item.name}}
         </div>
         <div class="value">

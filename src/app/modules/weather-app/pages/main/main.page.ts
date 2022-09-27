@@ -1,18 +1,21 @@
 import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import {LocationStrategy} from "@angular/common";
-import {NavigationEnd, Router} from "@angular/router";
-import {filter, Subscription} from "rxjs";
+import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
+import {filter, forkJoin, Subscription} from "rxjs";
+import {UrlService} from "../../../../shared/services/url.service";
+import {WeatherService} from "../../../../shared/services/weather.service";
 
 @Component({
   templateUrl: './main.page.html',
   styleUrls: ['./main.page.scss'],
 })
-export class MainPage implements OnInit, OnDestroy {
-  height = "0%";
-
+export class MainPage implements OnInit {
+  url = "";
+  height = "0%"
   sub: Subscription = Subscription.EMPTY;
 
-  constructor(private url: LocationStrategy, private cd: ChangeDetectorRef, private router: Router) {}
+  constructor(private urlService: UrlService, private router: Router) {
+  }
 
   ngOnInit(): void {
     this.routerHandler();
@@ -23,19 +26,14 @@ export class MainPage implements OnInit, OnDestroy {
   }
 
   private routerHandler(): void {
-    this.sub = this.router.events.pipe(
-      filter(e => e instanceof NavigationEnd)
-    ).subscribe({
-      next: (event: any) => {
-        if(event.url === "/today/weather") {
-          this.height = "60%"
-        } else {
-          this.height = "90%"
-        }
+    this.sub = this.urlService.getUrl()
+    .subscribe({
+      next: (url: string) => {
+        this.height = url === "/today/weather" ? "60%" : "90%"
       }
     })
   }
 
 
-
 }
+

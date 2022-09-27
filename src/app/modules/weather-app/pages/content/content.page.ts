@@ -51,7 +51,5 @@ export class ContentPage implements OnInit, OnDestroy {
         }
       })
     )
-
-
   }
 }

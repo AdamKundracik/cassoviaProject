@@ -1,4 +1,5 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "./src/app/variables";
 
 @font-face {
   font-family: "Barlow";
@@ -15,4 +16,35 @@ html, body{
   padding: 0;
 }
 
-//.cdk-overlay-container, .cdk-overlay-pane { z-index: 9999 !important; }
+//shared css
+.icon {
+  text-align: center;
+  font-size: 35px;
+  color: $icon-color;
+}
+.text {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bolder;
+  color: $item-name-text-color;
+}
+.temperature {
+  position: relative;
+  display: flex;
+  left: 7px;
+  .number {
+    font-size: 64px;
+  }
+  .degree {
+    position: relative;
+    font-size: 24px;
+    vertical-align: top;
+    margin-top: 10px;
+  }
+}
+.text-values {
+  font-size: $value-text-size;
+  text-align: center;
+  font-weight: bolder;
+}
+

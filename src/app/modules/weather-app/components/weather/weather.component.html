@@ -22,11 +22,11 @@
 
   <div class="weather-item max-min">
     <div class="max">
-      <span>{{weatherDataNow?.main?.temp_max | number: "1.0-0"}}°C</span>
+      <span>{{weatherDataToday?.temp?.max | number: "1.0-0"}}°C</span>
       <i class="bi bi-arrow-up"></i>
     </div>
     <div class="min">
-      <span>{{weatherDataNow?.main?.temp_min | number: "1.0-0"}}°C</span>
+      <span>{{weatherDataToday?.temp?.min | number: "1.0-0"}}°C</span>
       <i class="bi bi-arrow-down"></i>
     </div>
   </div>
@@ -39,6 +39,4 @@
     <app-weather-item [data]="weatherDataToday.sunrise * 1000 | date:'HH:mm'" [type]="weatherItemTypes.Sunrise"></app-weather-item>
     <app-weather-item [data]="(weatherDataToday.sunrise - weatherDataToday.sunset) * 1000 | date: 'HH:mm'" [type]="weatherItemTypes.Daytime"></app-weather-item>
   </ng-container>
-
-
 </div>

@@ -1,3 +1,5 @@
+@import "./../../../../variables";
+
 .wrapper {
   display: flex;
   height: 100%;
@@ -5,8 +7,9 @@
   align-items: center;
   h4 {
     padding: 27px 0 27px 0;
-    color: #999999;
+    color: $item-name-text-color;
     margin: 0;
+    font-size: $value-text-size;
   }
   .ng-autocomplete {
     margin: 0 auto;
@@ -20,7 +23,7 @@
         box-shadow: none;
       }
       input {
-        background-color: #F3F3F3;
+        background-color: $grey-background;
         box-shadow: none;
       }
     }
@@ -32,16 +35,16 @@
   display: flex;
   justify-content: space-between;
   .cityName {
-    font-size: 18px;
+    font-size: $autocomplete-item-text-size;
     letter-spacing: -0.05em;
-    color: #444444;
+    color: $value-color;
   }
   .value {
     font-weight: 300;
-    color: #666666;
+    color: $autocomplete-value-color;
   }
   div {
     font-family: "Barlow";
-    margin-bottom: 7px;
+    margin-bottom: 6px;
   }
 }

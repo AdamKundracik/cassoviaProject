@@ -22,13 +22,13 @@
     isolation:isolate;
     position: relative;
     overflow: hidden;
-  }
-  .stacked > *{
-    grid-column:1/-1;
-    grid-row:1/-1
-  }
-  .stacked > .img{
-    z-index:-1;
+    & > *{
+      grid-column:1/-1;
+      grid-row:1/-1
+    }
+    & > .img{
+      z-index:-1;
+    }
   }
   .content-box{
     box-shadow: 0px -16px 40px rgba(0, 0, 0, 0.2);
@@ -43,7 +43,6 @@
 
 @media only screen and (min-width: 1200px) {
   .wrapper {
-    //margin: auto;
     width: 800px;
     display: flex;
     margin: auto;

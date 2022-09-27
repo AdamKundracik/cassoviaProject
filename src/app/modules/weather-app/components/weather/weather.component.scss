@@ -1,3 +1,5 @@
+@import "./../../../../variables";
+
 .weather-items {
   height: 100%;
   display: grid;
@@ -5,47 +7,15 @@
   grid-template-rows: 1fr 1fr 1fr ;
   .weather-item {
     margin: auto;
-    .icon {
-      text-align: center;
-      font-size: 35px;
-      color: #AAAAAA;
-    }
-    .text {
-      text-align: center;
-      font-size: 12px;
-      font-weight: bolder;
-      color: #999999;
-    }
-    .temperature {
-      display: flex;
-      .number {
-        font-size: 64px;
-      }
-      .degree {
-        position: relative;
-        font-size: 24px;
-        vertical-align: top;
-        margin-top: 10px;
-      }
-    }
-    .text-values {
-      font-size: 16px;
-      text-align: center;
-      font-weight: bolder;
-    }
+
   }
   .max-min {
     margin: auto;
     flex-direction: column;
     color: #666666;
+    font-size: $value-text-size;
     .max {
-      font-size: 16px;
       margin-bottom: 4px;
-      color: #999999;
-    }
-    .min {
-      font-size: 16px;
-      color: #999999;
     }
   }
 }
@@ -54,26 +24,23 @@
   .weather-items {
     .weather-item {
       .icon {
-        font-size: 25px;
+        font-size: $icon-size-1200;
       }
       .text {
-        font-size: 10px;
+        font-size: $text-size-2-1200;
       }
       .temperature {
         .number {
-          font-size: 48px;
+          font-size: 54px;
         }
         .degree {
-          font-size: 18px;
+          font-size: 22px;
           vertical-align: top;
           margin-top: 10px;
         }
       }
-      .max {
-        font-size: 12px;
-      }
-      .min {
-        font-size: 12px;
+      .max-min {
+        font-size: $icon-size-1200;
       }
     }
   }
