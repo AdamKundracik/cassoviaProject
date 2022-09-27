@@ -19,12 +19,12 @@ html, body{
 //shared css
 .icon {
   text-align: center;
-  font-size: 35px;
+  font-size: $icon-size;
   color: $icon-color;
 }
 .text {
   text-align: center;
-  font-size: 12px;
+  font-size: $text-size-2;
   font-weight: bolder;
   color: $item-name-text-color;
 }
