@@ -1,0 +1,24 @@
+@import "./../../../../variables";
+
+:host {
+  display: flex;
+}
+.weather-item {;
+  margin: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+  .weather-item {;
+    .icon {
+      font-size: $icon-size-1200;
+      color: $icon-color;
+    }
+    .text-values{
+      font-size: $value-text-size-1200;
+    }
+    .text {
+      font-size: $text-size-2-1200;
+      color: $item-name-text-color;
+    }
+  }
+}

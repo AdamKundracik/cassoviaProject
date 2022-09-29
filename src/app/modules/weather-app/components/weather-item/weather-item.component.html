@@ -1,0 +1,21 @@
+<div class="weather-item" [ngSwitch]="type">
+  <div class="icon">
+    <i class="bi bi-droplet" *ngSwitchCase="weatherItemTypes.Humidity"></i>
+    <i class="bi bi-speedometer" *ngSwitchCase="weatherItemTypes.Pressure"></i>
+    <i class="bi bi-wind" *ngSwitchCase="weatherItemTypes.Wind"></i>
+    <i class="bi bi-sunrise" *ngSwitchCase="weatherItemTypes.Sunrise"></i>
+    <i class="bi bi-sunset" *ngSwitchCase="weatherItemTypes.Sunset"></i>
+    <i class="bi bi-hourglass" *ngSwitchCase="weatherItemTypes.Daytime"></i>
+  </div>
+  <div class="text-values">
+    <span *ngSwitchCase="weatherItemTypes.Humidity">{{data}}%</span>
+    <span *ngSwitchCase="weatherItemTypes.Pressure">{{data}} mBar</span>
+    <span *ngSwitchCase="weatherItemTypes.Wind">{{data}} km/h</span>
+    <span *ngSwitchCase="weatherItemTypes.Sunrise">{{data}}</span>
+    <span *ngSwitchCase="weatherItemTypes.Sunset">{{data}}</span>
+    <span *ngSwitchCase="weatherItemTypes.Daytime">{{data}}</span>
+  </div>
+  <div class="text">
+    {{type}}
+  </div>
+</div>
