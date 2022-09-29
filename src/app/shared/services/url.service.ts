@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, filter, Observable, Subscription} from "rxjs";
-import {NavigationEnd, Router} from "@angular/router";
+import { BehaviorSubject, filter, Observable, Subscription } from 'rxjs';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UrlService {
   private url = new BehaviorSubject<string>('');
@@ -22,12 +22,12 @@ export class UrlService {
   }
 
   private routerHandler(): void {
-    this.sub = this.router.events.pipe(
-      filter(e => e instanceof NavigationEnd)
-    ).subscribe({
-      next: (event: any) => {
-        this.setUrl(event.url);
-      }
-    })
+    this.sub = this.router.events
+      .pipe(filter((e) => e instanceof NavigationEnd))
+      .subscribe({
+        next: (event: any) => {
+          this.setUrl(event.url);
+        },
+      });
   }
 }

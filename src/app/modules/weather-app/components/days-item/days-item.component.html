@@ -1,6 +1,5 @@
 <div class="day-box">
-
-  <div *ngIf="data?.main === 'Rain'"class="icon">
+  <div *ngIf="data?.main === 'Rain'" class="icon">
     <i class="bi bi-cloud-drizzle"></i>
   </div>
 
@@ -13,14 +12,13 @@
   </div>
 
   <div class="text-values">
-    <span>{{dataWeather!.dt * 1000 | date: "EEE, d"}}</span>
+    <span>{{ dataWeather!.dt * 1000 | date: "EEE, d" }}</span>
   </div>
 
   <div class="text">
-    <span>{{dataWeather?.temp?.max | number: "1.0-0"}}°C</span>
+    <span>{{ dataWeather?.temp?.max | number: "1.0-0" }}°C</span>
     <i class="bi bi-arrow-up"></i>
-    <span>{{dataWeather?.temp?.min | number: "1.0-0"}}°C</span>
+    <span>{{ dataWeather?.temp?.min | number: "1.0-0" }}°C</span>
     <i class="bi bi-arrow-down"></i>
   </div>
-
 </div>

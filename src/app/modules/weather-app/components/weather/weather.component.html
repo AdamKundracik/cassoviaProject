@@ -1,5 +1,4 @@
 <div class="weather-items">
-
   <div class="weather-item" [ngSwitch]="weather?.main">
     <div class="icon">
       <i *ngSwitchCase="'Fog'" class="bi bi-cloud-haze"></i>
@@ -9,34 +8,54 @@
       <i *ngSwitchCase="'Clear'" class="bi bi-sun"></i>
     </div>
     <div class="text-value">
-      <span>{{weather?.main}}</span>
+      <span>{{ weather?.main }}</span>
     </div>
   </div>
 
   <div class="weather-item">
     <div class="text-values temperature">
-      <span class="number">{{weatherDataNow?.main?.temp | number: "1.0-0"}}</span>
+      <span class="number">{{
+        weatherDataNow?.main?.temp | number: "1.0-0"
+      }}</span>
       <span class="degree">°C</span>
     </div>
   </div>
 
   <div class="weather-item max-min">
     <div class="max">
-      <span>{{weatherDataToday?.temp?.max | number: "1.0-0"}}°C</span>
+      <span>{{ weatherDataToday?.temp?.max | number: "1.0-0" }}°C</span>
       <i class="bi bi-arrow-up"></i>
     </div>
     <div class="min">
-      <span>{{weatherDataToday?.temp?.min | number: "1.0-0"}}°C</span>
+      <span>{{ weatherDataToday?.temp?.min | number: "1.0-0" }}°C</span>
       <i class="bi bi-arrow-down"></i>
     </div>
   </div>
 
   <ng-container *ngIf="weatherDataToday">
     <app-weather-item [data]="weatherDataToday.humidity"></app-weather-item>
-    <app-weather-item [data]="weatherDataToday.pressure" [type]="weatherItemTypes.Pressure"></app-weather-item>
-    <app-weather-item [data]="weatherDataToday.speed | number: '1.0-0'" [type]="weatherItemTypes.Wind"></app-weather-item>
-    <app-weather-item [data]="weatherDataToday.sunset * 1000 | date:'HH:mm'" [type]="weatherItemTypes.Sunset"></app-weather-item>
-    <app-weather-item [data]="weatherDataToday.sunrise * 1000 | date:'HH:mm'" [type]="weatherItemTypes.Sunrise"></app-weather-item>
-    <app-weather-item [data]="(weatherDataToday.sunrise - weatherDataToday.sunset) * 1000 | date: 'HH:mm'" [type]="weatherItemTypes.Daytime"></app-weather-item>
+    <app-weather-item
+      [data]="weatherDataToday.pressure"
+      [type]="weatherItemTypes.Pressure"
+    ></app-weather-item>
+    <app-weather-item
+      [data]="weatherDataToday.speed | number: '1.0-0'"
+      [type]="weatherItemTypes.Wind"
+    ></app-weather-item>
+    <app-weather-item
+      [data]="weatherDataToday.sunset * 1000 | date: 'HH:mm'"
+      [type]="weatherItemTypes.Sunset"
+    ></app-weather-item>
+    <app-weather-item
+      [data]="weatherDataToday.sunrise * 1000 | date: 'HH:mm'"
+      [type]="weatherItemTypes.Sunrise"
+    ></app-weather-item>
+    <app-weather-item
+      [data]="
+        (weatherDataToday.sunrise - weatherDataToday.sunset) * 1000
+          | date: 'HH:mm'
+      "
+      [type]="weatherItemTypes.Daytime"
+    ></app-weather-item>
   </ng-container>
 </div>

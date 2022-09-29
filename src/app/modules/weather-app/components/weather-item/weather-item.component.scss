@@ -3,17 +3,17 @@
 :host {
   display: flex;
 }
-.weather-item {;
+.weather-item {
   margin: auto;
 }
 
 @media only screen and (min-width: 1200px) {
-  .weather-item {;
+  .weather-item {
     .icon {
       font-size: $icon-size-1200;
       color: $icon-color;
     }
-    .text-values{
+    .text-values {
       font-size: $value-text-size-1200;
     }
     .text {

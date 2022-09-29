@@ -1,4 +1,3 @@
-
 export interface Coord {
   lon: number;
   lat: number;
@@ -59,4 +58,3 @@ export interface WeatherDataToday {
   cnt: number;
   list: List[];
 }
-

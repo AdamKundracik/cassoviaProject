@@ -1,23 +1,23 @@
 <div class="wrapper">
   <h4>Location</h4>
   <div class="ng-autocomplete">
-
     <ng-autocomplete
       [data]="cities"
       [searchKeyword]="keyword"
       placeholder="Search city..."
       [itemTemplate]="itemTemplate"
       [notFoundTemplate]="notFoundTemplate"
-      (selected)='selectEvent($event)'>
+      (selected)="selectEvent($event)"
+    >
     </ng-autocomplete>
 
     <ng-template #itemTemplate let-item>
       <div class="city">
         <div class="cityName" [innerHTML]="item.name">
-          {{item.name}}
+          {{ item.name }}
         </div>
         <div class="value">
-          {{item.value ? (item.value | number: "1.0-0") + "°C" : "..."}}
+          {{ item.value ? (item.value | number: "1.0-0") + "°C" : "..." }}
         </div>
       </div>
     </ng-template>
@@ -25,7 +25,5 @@
     <ng-template #notFoundTemplate let-notFound>
       <div [innerHTML]="notFound"></div>
     </ng-template>
-
   </div>
 </div>
-

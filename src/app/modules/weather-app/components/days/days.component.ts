@@ -1,23 +1,16 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {DailyWeather} from "../../../../shared/models/daily.model";
-import {WeatherService} from "../../../../shared/services/weather.service";
+import { Component, Input, OnInit } from '@angular/core';
+import { DailyWeather } from '../../../../shared/models/daily.model';
 
 @Component({
   selector: 'app-days',
   templateUrl: './days.component.html',
-  styleUrls: ['./days.component.scss']
+  styleUrls: ['./days.component.scss'],
 })
 export class DaysComponent implements OnInit {
-
   @Input()
-  weatherData3Days?: DailyWeather
+  weatherData3Days?: DailyWeather;
 
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-
-  }
-
-
+  ngOnInit(): void {}
 }

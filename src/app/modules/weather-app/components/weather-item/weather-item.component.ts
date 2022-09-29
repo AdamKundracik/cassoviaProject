@@ -1,13 +1,13 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {WeatherDataNow} from "../../../../shared/models/weather-data-now.model";
+import { Component, Input, OnInit } from '@angular/core';
+import { WeatherDataNow } from '../../../../shared/models/weather-data-now.model';
 
 export enum ItemType {
-  Humidity = "Humidity",
-  Pressure = "Pressure",
-  Wind = "Wind",
-  Sunset = "Sunset",
-  Sunrise = "Sunrise",
-  Daytime = "Daytime"
+  Humidity = 'Humidity',
+  Pressure = 'Pressure',
+  Wind = 'Wind',
+  Sunset = 'Sunset',
+  Sunrise = 'Sunrise',
+  Daytime = 'Daytime',
 }
 
 export interface DateLength {
@@ -18,10 +18,9 @@ export interface DateLength {
 @Component({
   selector: 'app-weather-item',
   templateUrl: './weather-item.component.html',
-  styleUrls: ['./weather-item.component.scss']
+  styleUrls: ['./weather-item.component.scss'],
 })
 export class WeatherItemComponent implements OnInit {
-
   weatherItemTypes = ItemType;
 
   @Input()
@@ -30,9 +29,7 @@ export class WeatherItemComponent implements OnInit {
   @Input()
   type: ItemType = ItemType.Humidity;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

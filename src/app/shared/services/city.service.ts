@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CityService {
+  city = 'Košice';
 
-  city = "Košice"
-
-  constructor() {
-  }
+  constructor() {}
 
   public setCity(city: string): void {
     this.city = city;

@@ -1,38 +1,34 @@
-import {City} from "../../../shared/models/city.model";
+import { City } from '../../../shared/models/city.model';
 
 export const cities: City[] = [
   {
-    id: "Bratislava",
+    id: 'Bratislava',
     name: 'Bratislava',
-    value: null
+    value: null,
   },
   {
-    id: "Humenné",
+    id: 'Humenné',
     name: 'Humenné',
-    value: null
+    value: null,
   },
   {
-    id: "Koromľa",
+    id: 'Koromľa',
     name: 'Koromľa',
-    value: null
-
+    value: null,
   },
   {
-    id: "Košice",
+    id: 'Košice',
     name: 'Košice',
-    value: null
-
+    value: null,
   },
   {
-    id: "Michalovce",
+    id: 'Michalovce',
     name: 'Michalovce',
-    value: null
-
+    value: null,
   },
   {
-    id: "Sobrance",
+    id: 'Sobrance',
     name: 'Sobrance',
-    value: null
-
-  }
+    value: null,
+  },
 ];

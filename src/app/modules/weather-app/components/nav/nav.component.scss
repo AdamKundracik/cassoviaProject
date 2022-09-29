@@ -19,7 +19,7 @@
   .datetime {
     width: 60%;
     color: $item-name-text-color;
-    font-size: $datetime-size
+    font-size: $datetime-size;
   }
   .locality {
     cursor: pointer;
@@ -40,5 +40,4 @@
       font-size: $locality-size;
     }
   }
-
 }

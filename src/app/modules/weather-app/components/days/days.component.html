@@ -1,7 +1,9 @@
 <div class="days">
-
   <div class="day" *ngFor="let weather of weatherData3Days?.list">
-    <app-days-item [data]="weatherMain" [dataWeather]="weather" *ngFor="let weatherMain of weather?.weather"></app-days-item>
+    <app-days-item
+      [data]="weatherMain"
+      [dataWeather]="weather"
+      *ngFor="let weatherMain of weather?.weather"
+    ></app-days-item>
   </div>
-
 </div>
