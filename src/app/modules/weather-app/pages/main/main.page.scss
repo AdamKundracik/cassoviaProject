@@ -22,10 +22,6 @@
     isolation: isolate;
     position: relative;
     overflow: hidden;
-    & > * {
-      grid-column: 1/-1;
-      grid-row: 1/-1;
-    }
     & > .img {
       z-index: -1;
     }
